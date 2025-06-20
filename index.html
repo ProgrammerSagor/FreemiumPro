@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreemiumPro - Start Free, Scale Unlimited</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-rocket text-2xl text-primary-500"></i>
+                    <span class="text-xl font-bold">FreemiumPro</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="hover:text-primary-500 transition-colors">Features</a>
+                    <a href="#pricing" class="hover:text-primary-500 transition-colors">Pricing</a>
+                    <a href="#reviews" class="hover:text-primary-500 transition-colors">Reviews</a>
+                    <a href="#faq" class="hover:text-primary-500 transition-colors">FAQ</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:inline"></i>
+                    </button>
+                    <button class="bg-primary-500 hover:bg-primary-600 text-white px-6 py-2 rounded-lg transition-colors">
+                        Start Free
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-20 bg-gradient-to-br from-primary-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        Start <span class="text-primary-500">Free</span>,<br>
+                        Scale <span class="text-primary-500">Unlimited</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+                        Join 50,000+ users who started with our free plan and grew their business without limits. No credit card required.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button class="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
+                            <i class="fas fa-rocket mr-2"></i>
+                            Start Free Now
+                        </button>
+                        <button class="border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all">
+                            <i class="fas fa-play mr-2"></i>
+                            Watch Demo
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
+                        <i class="fas fa-shield-alt mr-1"></i>
+                        No credit card required • Cancel anytime
+                    </p>
+                </div>
+                <div class="relative">
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex space-x-2">
+                                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            </div>
+                            <span class="text-sm text-gray-500">FreemiumPro Dashboard</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div>
+                            <div class="h-4 bg-primary-200 dark:bg-primary-900 rounded w-full"></div>
+                            <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-1/2"></div>
+                            <div class="grid grid-cols-3 gap-4 mt-6">
+                                <div class="h-20 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-chart-line text-primary-500 text-2xl"></i>
+                                </div>
+                                <div class="h-20 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-users text-green-500 text-2xl"></i>
+                                </div>
+                                <div class="h-20 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-star text-purple-500 text-2xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Free Section -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Why We Offer It Free?</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    We believe everyone deserves access to powerful tools. Our free plan gives you everything you need to get started and grow.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 rounded-2xl bg-gray-50 dark:bg-gray-800 hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-primary-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Built for Everyone</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        We want to democratize access to professional tools. Whether you're a student, freelancer, or startup, you deserve great software.
+                    </p>
+                </div>
+                <div class="text-center p-8 rounded-2xl bg-gray-50 dark:bg-gray-800 hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-seedling text-green-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Grow With You</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Start free and upgrade when you're ready. Our free plan has no time limits - use it forever if it meets your needs.
+                    </p>
+                </div>
+                <div class="text-center p-8 rounded-2xl bg-gray-50 dark:bg-gray-800 hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-rocket text-purple-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">No Hidden Catches</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        What you see is what you get. No credit card required, no trials that expire, no feature limitations that surprise you later.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Comparison -->
+    <section id="features" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Free vs Paid Features</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">
+                    See exactly what you get with each plan. No surprises, just transparent value.
+                </p>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden">
+                    <div class="grid md:grid-cols-3 gap-0">
+                        <div class="p-6 border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-700">
+                            <h3 class="text-lg font-semibold mb-4">Feature</h3>
+                        </div>
+                        <div class="p-6 border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-700 bg-primary-50 dark:bg-primary-900/20">
+                            <h3 class="text-lg font-semibold mb-4 text-primary-600 dark:text-primary-400">
+                                <i class="fas fa-gift mr-2"></i>Free Plan
+                            </h3>
+                        </div>
+                        <div class="p-6 bg-gradient-to-br from-primary-500 to-primary-600 text-white">
+                            <h3 class="text-lg font-semibold mb-4">
+                                <i class="fas fa-crown mr-2"></i>Pro Plan
+                            </h3>
+                        </div>
+                    </div>
+                    
+                    <div class="divide-y divide-gray-200 dark:divide-gray-700">
+                        <div class="grid md:grid-cols-3 gap-0">
+                            <div class="p-4 font-medium">Projects</div>
+                            <div class="p-4 text-center bg-primary-50 dark:bg-primary-900/20">Up to 3</div>
+                            <div class="p-4 text-center bg-primary-500 text-white">Unlimited</div>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-0">
+                            <div class="p-4 font-medium">Storage</div>
+                            <div class="p-4 text-center bg-primary-50 dark:bg-primary-900/20">1GB</div>
+                            <div class="p-4 text-center bg-primary-500 text-white">100GB</div>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-0">
+                            <div class="p-4 font-medium">Team Members</div>
+                            <div class="p-4 text-center bg-primary-50 dark:bg-primary-900/20">1</div>
+                            <div class="p-4 text-center bg-primary-500 text-white">Unlimited</div>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-0">
+                            <div class="p-4 font-medium">Advanced Analytics</div>
+                            <div class="p-4 text-center bg-primary-50 dark:bg-primary-900/20">
+                                <i class="fas fa-times text-red-500"></i>
+                            </div>
+                            <div class="p-4 text-center bg-primary-500 text-white">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-0">
+                            <div class="p-4 font-medium">Priority Support</div>
+                            <div class="p-4 text-center bg-primary-50 dark:bg-primary-900/20">
+                                <i class="fas fa-times text-red-500"></i>
+                            </div>
+                            <div class="p-4 text-center bg-primary-500 text-white">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Use Cases -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Who Uses FreemiumPro?</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">
+                    From solo creators to growing teams, see how different users succeed with our platform.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-900/20 dark:to-indigo-900/20 p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-user-graduate text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Students & Learners</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        "Perfect for my college projects. The free plan has everything I need to create professional presentations and collaborate with classmates."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">A</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Alex Chen</p>
+                            <p class="text-sm text-gray-500">Design Student</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/20 p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Freelancers</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        "Started free and upgraded when my client base grew. The transition was seamless, and I never lost any of my work."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">S</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Sarah Johnson</p>
+                            <p class="text-sm text-gray-500">Freelance Designer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-50 to-violet-100 dark:from-purple-900/20 dark:to-violet-900/20 p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Small Teams</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        "Our startup team of 5 used the free plan for 6 months. When we got funding, upgrading was a no-brainer."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">M</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Mike Rodriguez</p>
+                            <p class="text-sm text-gray-500">Startup Founder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Video Section -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">See It In Action</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">
+                    Watch how easy it is to get started with FreemiumPro in under 2 minutes.
+                </p>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="relative bg-gray-900 rounded-2xl shadow-2xl overflow-hidden group cursor-pointer" id="demo-player">
+                    <div class="aspect-video bg-gradient-to-br from-primary-500 to-purple-600 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
+                                <i class="fas fa-play text-primary-500 text-2xl ml-1"></i>
+                            </div>
+                            <h3 class="text-white text-2xl font-bold mb-2">Getting Started Guide</h3>
+                            <p class="text-white/80">2 min walkthrough</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">What Users Say</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">
+                    Don't just take our word for it. Here's what real users say about FreemiumPro.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400 mr-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <img src="https://logo.clearbit.com/capterra.com" alt="Capterra" class="h-6 opacity-60">
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        "The free plan is genuinely useful - not just a teaser. I've been using it for months and it handles everything I need for my small business."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">E</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Emma Wilson</p>
+                            <p class="text-sm text-gray-500">Small Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400 mr-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <img src="https://logo.clearbit.com/g2.com" alt="G2" class="h-6 opacity-60">
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        "Switched from a competitor after trying the free plan. The interface is so much cleaner and the features actually work as advertised."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">D</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">David Park</p>
+                            <p class="text-sm text-gray-500">Marketing Manager</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400 mr-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <img src="https://logo.clearbit.com/trustpilot.com" alt="Trustpilot" class="h-6 opacity-60">
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        "The upgrade from free to paid was worth every penny. But honestly, I could have stayed on the free plan and been happy."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">L</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Lisa Chang</p>
+                            <p class="text-sm text-gray-500">Creative Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Stats -->
+    <section class="py-20 bg-primary-500 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Join Our Growing Community</h2>
+                <p class="text-xl text-primary-100">
+                    Thousands of creators, entrepreneurs, and teams trust FreemiumPro every day.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl md:text-6xl font-bold mb-2" data-counter="50000">0</div>
+                    <p class="text-primary-100">Active Users</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-6xl font-bold mb-2" data-counter="125000">0</div>
+                    <p class="text-primary-100">Projects Created</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-6xl font-bold mb-2" data-counter="15000">0</div>
+                    <p class="text-primary-100">Templates Shared</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-6xl font-bold mb-2" data-counter="99">0</div>
+                    <p class="text-primary-100">% Uptime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Carousel -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Inside FreemiumPro</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">
+                    Take a peek at our clean, intuitive interface designed for productivity.
+                </p>
+            </div>
+            <div class="relative max-w-6xl mx-auto">
+                <div class="carousel-container overflow-hidden rounded-2xl">
+                    <div class="carousel-track flex transition-transform duration-500 ease-in-out">
+                        <div class="carousel-slide min-w-full">
+                            <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 mx-4">
+                                <div class="flex items-center justify-between mb-6">
+                                    <h3 class="text-lg font-semibold">Dashboard Overview</h3>
+                                    <div class="flex space-x-2">
+                                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-3 gap-6 mb-6">
+                                    <div class="bg-primary-50 dark:bg-primary-900/20 p-4 rounded-lg">
+                                        <i class="fas fa-chart-line text-primary-500 text-2xl mb-2"></i>
+                                        <p class="text-sm text-gray-600 dark:text-gray-300">Analytics</p>
+                                    </div>
+                                    <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                                        <i class="fas fa-users text-green-500 text-2xl mb-2"></i>
+                                        <p class="text-sm text-gray-600 dark:text-gray-300">Team</p>
+                                    </div>
+                                    <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
+                                        <i class="fas fa-cog text-purple-500 text-2xl mb-2"></i>
+                                        <p class="text-sm text-gray-600 dark:text-gray-300">Settings</p>
+                                    </div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full"></div>
+                                    <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div>
+                                    <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-1/2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide min-w-full">
+                            <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 mx-4">
+                                <div class="flex items-center justify-between mb-6">
+                                    <h3 class="text-lg font-semibold">Project Editor</h3>
+                                    <button class="bg-primary-500 text-white px-4 py-2 rounded-lg text-sm">Save</button>
+                                </div>
+                                <div class="grid grid-cols-4 gap-4 mb-6">
+                                    <div class="col-span-3 bg-gray-100 dark:bg-gray-800 rounded-lg h-40 flex items-center justify-center">
+                                        <i class="fas fa-image text-gray-400 text-3xl"></i>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div class="bg-primary-100 dark:bg-primary-900/20 p-3 rounded-lg">
+                                            <i class="fas fa-palette text-primary-500"></i>
+                                        </div>
+                                        <div class="bg-green-100 dark:bg-green-900/20 p-3 rounded-lg">
+                                            <i class="fas fa-font text-green-500"></i>
+                                        </div>
+                                        <div class="bg-purple-100 dark:bg-purple-900/20 p-3 rounded-lg">
+                                            <i class="fas fa-shapes text-purple-500"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex space-x-2">
+                                        <button class="p-2 bg-gray-100 dark:bg-gray-800 rounded">
+                                            <i class="fas fa-undo text-gray-600 dark:text-gray-300"></i>
+                                        </button>
+                                        <button class="p-2 bg-gray-100 dark:bg-gray-800 rounded">
+                                            <i class="fas fa-redo text-gray-600 dark:text-gray-300"></i>
+                                        </button>
+                                    </div>
+                                    <div class="text-sm text-gray-500">Last saved: 2 min ago</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide min-w-full">
+                            <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 mx-4">
+                                <div class="flex items-center justify-between mb-6">
+                                    <h3 class="text-lg font-semibold">Team Collaboration</h3>
+                                    <button class="bg-green-500 text-white px-4 py-2 rounded-lg text-sm">
+                                        <i class="fas fa-plus mr-2"></i>Invite
+                                    </button>
+                                </div>
+                                <div class="space-y-4 mb-6">
+                                    <div class="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                                        <div class="flex items-center">
+                                            <div class="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center mr-3">
+                                                <span class="text-white font-bold">A</span>
+                                            </div>
+                                            <div>
+                                                <p class="font-semibold">Alex Chen</p>
+                                                <p class="text-sm text-gray-500">Owner</p>
+                                            </div>
+                                        </div>
+                                        <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                                    </div>
+                                    <div class="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                                        <div class="flex items-center">
+                                            <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                                                <span class="text-white font-bold">S</span>
+                                            </div>
+                                            <div>
+                                                <p class="font-semibold">Sarah Johnson</p>
+                                                <p class="text-sm text-gray-500">Editor</p>
+                                            </div>
+                                        </div>
+                                        <span class="w-3 h-3 bg-yellow-500 rounded-full"></span>
+                                    </div>
+                                </div>
+                                <div class="border-t border-gray-200 dark:border-gray-700 pt-4">
+                                    <p class="text-sm text-gray-500 mb-2">Recent Activity</p>
+                                    <div class="space-y-2">
+                                        <p class="text-sm"><strong>Alex</strong> updated the design • 5 min ago</p>
+                                        <p class="text-sm"><strong>Sarah</strong> left a comment • 10 min ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 shadow-lg rounded-full w-12 h-12 flex items-center justify-center hover:shadow-xl transition-all">
+                    <i class="fas fa-chevron-left text-gray-600 dark:text-gray-300"></i>
+                </button>
+                <button class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 shadow-lg rounded-full w-12 h-12 flex items-center justify-center hover:shadow-xl transition-all">
+                    <i class="fas fa-chevron-right text-gray-600 dark:text-gray-300"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section id="pricing" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Simple, Transparent Pricing</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">
+                    Start free, upgrade when you're ready. No surprises, no hidden fees.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Free Plan -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl border-2 border-transparent hover:border-gray-200 dark:hover:border-gray-700 transition-all">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Free</h3>
+                        <div class="text-4xl font-bold mb-2">$0</div>
+                        <p class="text-gray-600 dark:text-gray-300">Forever free</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Up to 3 projects</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>1GB storage</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Basic templates</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Community support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Export to PDF</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-3 rounded-lg font-semibold hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                        Get Started Free
+                    </button>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="bg-gradient-to-br from-primary-500 to-primary-600 p-8 rounded-2xl text-white relative transform scale-105 shadow-2xl">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-yellow-900 px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                    </div>
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Pro</h3>
+                        <div class="text-4xl font-bold mb-2">$19</div>
+                        <p class="text-primary-100">per month</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check mr-3"></i>
+                            <span>Unlimited projects</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check mr-3"></i>
+                            <span>100GB storage</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check mr-3"></i>
+                            <span>Premium templates</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check mr-3"></i>
+                            <span>Priority support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check mr-3"></i>
+                            <span>Advanced analytics</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check mr-3"></i>
+                            <span>Team collaboration</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white text-primary-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Start Free Trial
+                    </button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl border-2 border-transparent hover:border-gray-200 dark:hover:border-gray-700 transition-all">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+                        <div class="text-4xl font-bold mb-2">$99</div>
+                        <p class="text-gray-600 dark:text-gray-300">per month</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Everything in Pro</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Unlimited team members</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>1TB storage</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Custom integrations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Dedicated support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-primary-500 hover:bg-primary-600 text-white py-3 rounded-lg font-semibold transition-colors">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">
+                    Got questions? We've got answers. Here are the most common questions about FreemiumPro.
+                </p>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-4">
+                    <div class="faq-item bg-white dark:bg-gray-900 rounded-lg shadow-sm">
+                        <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold">Is the free plan really free forever?</span>
+                            <i class="fas fa-plus faq-icon transition-transform"></i>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <div class="p-6 pt-0 text-gray-600 dark:text-gray-300">
+                                Yes! Our free plan is genuinely free with no time limits or hidden catches. You can use it forever with up to 3 projects, 1GB storage, and access to basic templates. We believe everyone deserves access to great tools.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white dark:bg-gray-900 rounded-lg shadow-sm">
+                        <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold">Can I upgrade or downgrade anytime?</span>
+                            <i class="fas fa-plus faq-icon transition-transform"></i>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <div class="p-6 pt-0 text-gray-600 dark:text-gray-300">
+                                Absolutely! You can upgrade to Pro or Enterprise at any time, and downgrade back to Free if needed. When you downgrade, you'll keep access to your projects but some advanced features will be disabled until you upgrade again.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white dark:bg-gray-900 rounded-lg shadow-sm">
+                        <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold">Do I need a credit card to sign up for free?</span>
+                            <i class="fas fa-plus faq-icon transition-transform"></i>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <div class="p-6 pt-0 text-gray-600 dark:text-gray-300">
+                                Nope! No credit card required for the free plan. Just sign up with your email and start creating immediately. We only ask for payment information when you decide to upgrade to a paid plan.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white dark:bg-gray-900 rounded-lg shadow-sm">
+                        <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold">What happens to my data if I stop paying?</span>
+                            <i class="fas fa-plus faq-icon transition-transform"></i>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <div class="p-6 pt-0 text-gray-600 dark:text-gray-300">
+                                Your data is always safe with us. If you downgrade from a paid plan, your account reverts to the free plan limits, but all your projects remain accessible. You can export your work at any time, and we never delete your data without warning.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white dark:bg-gray-900 rounded-lg shadow-sm">
+                        <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold">Can I use FreemiumPro for commercial projects?</span>
+                            <i class="fas fa-plus faq-icon transition-transform"></i>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <div class="p-6 pt-0 text-gray-600 dark:text-gray-300">
+                                Yes! Both our free and paid plans allow commercial use. Create projects for your business, clients, or sell your designs - there are no restrictions on commercial usage for any of our plans.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white dark:bg-gray-900 rounded-lg shadow-sm">
+                        <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                            <span class="font-semibold">How does the referral program work?</span>
+                            <i class="fas fa-plus faq-icon transition-transform"></i>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <div class="p-6 pt-0 text-gray-600 dark:text-gray-300">
+                                When you refer friends to FreemiumPro, both you and your friend get bonus storage and premium template access for 30 days. If your friend upgrades to a paid plan, you'll receive a month of Pro features for free. There's no limit to how many friends you can refer!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referral Section -->
+    <section class="py-20 bg-gradient-to-br from-purple-500 to-pink-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Share & Earn Rewards</h2>
+                <p class="text-xl text-purple-100">
+                    Love FreemiumPro? Share it with friends and unlock premium features together.
+                </p>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-share-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">1. Share Your Link</h3>
+                        <p class="text-purple-100">Get your unique referral link and share it with friends.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-plus text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">2. Friends Sign Up</h3>
+                        <p class="text-purple-100">Your friends create their free accounts using your link.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-gift text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">3. Both Get Rewards</h3>
+                        <p class="text-purple-100">You both unlock bonus storage and premium templates.</p>
+                    </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur rounded-2xl p-8 text-center">
+                    <h3 class="text-2xl font-bold mb-4">What You'll Earn</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex items-center justify-center space-x-3">
+                            <i class="fas fa-database text-xl"></i>
+                            <span>+5GB bonus storage per referral</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-3">
+                            <i class="fas fa-crown text-xl"></i>
+                            <span>30-day premium template access</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-3">
+                            <i class="fas fa-dollar-sign text-xl"></i>
+                            <span>Free Pro month when friend upgrades</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-3">
+                            <i class="fas fa-infinity text-xl"></i>
+                            <span>Unlimited referrals</span>
+                        </div>
+                    </div>
+                    <button class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg mt-8 hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-share-alt mr-2"></i>
+                        Get My Referral Link
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Footer -->
+    <footer class="bg-gray-900 text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Join thousands of creators who chose FreemiumPro for their projects.
+                </p>
+                <button class="bg-primary-500 hover:bg-primary-600 text-white px-12 py-6 rounded-lg text-xl font-semibold transition-all transform hover:scale-105 mb-4">
+                    <i class="fas fa-rocket mr-3"></i>
+                    Start Free - No Credit Card Required
+                </button>
+                <p class="text-gray-400">
+                    <i class="fas fa-shield-alt mr-2"></i>
+                    Free forever • Upgrade anytime • Cancel anytime
+                </p>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-12">
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div>
+                        <div class="flex items-center space-x-2 mb-6">
+                            <i class="fas fa-rocket text-2xl text-primary-500"></i>
+                            <span class="text-xl font-bold">FreemiumPro</span>
+                        </div>
+                        <p class="text-gray-400 mb-6">
+                            Empowering creators with professional tools that scale with your ambitions.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold mb-4">Product</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#" class="hover:text-white transition-colors">Features</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Templates</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Integrations</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold mb-4">Support</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Community</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Status</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold mb-4">Company</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                    <p>&copy; 2025 FreemiumPro. All rights reserved. Made with <i class="fas fa-heart text-red-500"></i> for creators worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
